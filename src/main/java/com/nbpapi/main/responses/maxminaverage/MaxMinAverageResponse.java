@@ -1,10 +1,5 @@
 package com.nbpapi.main.responses.maxminaverage;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.util.List;
 
 public class MaxMinAverageResponse {

@@ -1,11 +1,5 @@
 package com.nbpapi.main.responses.maxminaverage;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-
 public class MaxMinRatesResponse {
     public String getCurrency() {
         return currency;

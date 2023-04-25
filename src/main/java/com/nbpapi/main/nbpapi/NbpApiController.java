@@ -71,12 +71,13 @@ public class NbpApiController {
             // if NBP API threw an exception, return different Messages with HTTP codes related to these exceptions
         } catch (HttpClientErrorException ex) {
             if (ex.getStatusCode() == HttpStatus.NOT_FOUND) {
-                return ResponseEntity.notFound().build();
+                return new ResponseEntity<>(new ResponseMessage("Didn't find any!"), HttpStatus.NOT_FOUND);
             }
-            else {
-                // if the exception was not caused by other errors, re-throw the exception
-                throw ex;
+            else if (ex.getStatusCode() == HttpStatus.BAD_REQUEST) {
+                return new ResponseEntity<>(new ResponseMessage("Invalid input!"), HttpStatus.BAD_REQUEST);
             }
+            // if the exception was not caused by other errors, re-throw the exception
+            else throw ex;
         }
     }
 

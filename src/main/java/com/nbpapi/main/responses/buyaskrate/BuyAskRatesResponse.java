@@ -1,11 +1,5 @@
 package com.nbpapi.main.responses.buyaskrate;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-
 public class BuyAskRatesResponse {
     public String getNo() {
         return no;

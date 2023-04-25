@@ -12,11 +12,27 @@ The project that handles 3 given tasks.
 ```
 curl http://localhost:8080/averageExchangeRate/{currencyCode}/{date}
 ```
+For example:
+```
+curl http://localhost:8080/averageExchangeRate/USD/2023-04-20
+```
+Should return 4.2024
 ### To get the maximum and minimum average rate for a {currencyCode} in the {lastQuotations} run a command in this format:
 ```
 curl http://localhost:8080/minMaxLastQuotations/{currencyCode}/{lastQuotations}
 ```
+For example:
+```
+curl http://localhost:8080/minMaxLastQuotations/USD/230
+```
+Should return maximum and minimum values of the last 230 quotations (days without weekends and holidays) for the American Dollar.
+
 ### To get the major difference between buy and ask values for a {currencyCode} in the {lastQuotations} run a command in this format:
 ```
 curl http://localhost:8080/majorDifferenceBuyAsk/{currencyCode}/{lastQuotations}
 ```
+For example:
+```
+curl http://localhost:8080/majorDifferenceBuyAsk/USD/230
+```
+Should return major difference between buy and ask values of the last 230 quotations (days without weekends and holidays) for the American Dollar.
